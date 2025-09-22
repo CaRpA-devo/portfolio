@@ -38,7 +38,7 @@
   --noise: 1;
 }
 
-@import "./components/animations/animations.css";
+@import "./components/animations/flyingLogos.style.css";
 
 /* Lokale Schrift einbinden */
 @font-face {

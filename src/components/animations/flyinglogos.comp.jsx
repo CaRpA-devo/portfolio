@@ -49,7 +49,7 @@ const FlyingLogos = ({ flyingLogos, animationStarted, onToggle }) => {
       <div className="w-full flex justify-start mt-auto absolute bottom-32 left-32">
         <button
           onClick={onToggle}
-          className={`btn btn-secondary ${animationStarted} rounded-2xl text-3xl font-semibold px-8 py-8  cursor-pointer z-10 transition-all  transform hover:scale-105 hover:shadow-xl`}
+          className={`btn btn-secondary ${animationStarted} opacity-80 rounded-2xl text-3xl font-semibold px-8 py-8  cursor-pointer z-10 transition-all  transform hover:scale-105 hover:shadow-xl`}
         >
           {animationStarted ? "Stopp" : "Dont´t Push !"}
         </button>
