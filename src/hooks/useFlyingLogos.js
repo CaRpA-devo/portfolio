@@ -1,22 +1,9 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { LOGO_DATA } from "../data/logos";
+import { LOGO_DATA } from "../data/flyingLogos";
 import { FLYING_LOGOS_CONFIG } from "../config/flyingLogos.config";
 
-/**
- * useFlyingLogos
- *
- * Kapselt die komplette Logik für die fliegenden Logos:
- * - Erzeugt zufällige Logos mit Start-/Endpositionen und Animationsparametern
- * - Startet/stoppt Intervalle zum kontinuierlichen Hinzufügen neuer Logos
- * - Räumt Timer beim Unmount zuverlässig auf
- *
- * Rückgabe:
- * - flyingLogos: Array der aktuellen Logo-Objekte (Grundlage fürs Rendern)
- * - animationStarted: Bool, ob die Animation aktiv ist
- * - toggleLogoAnimation: Handler zum Umschalten Start/Stop
- * - startAnimation: Handler zum expliziten Starten
- * - stopAnimation: Handler zum expliziten Stoppen
- */
+//use Flyinglogos
+
 export function useFlyingLogos(options = {}) {
   // Konfiguration zusammenführen (Defaults + Option-Overrides), memoisieren
   const cfg = useMemo(

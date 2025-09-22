@@ -49,17 +49,11 @@ const FlyingLogos = ({ flyingLogos, animationStarted, onToggle }) => {
       <div className="w-full flex justify-start mt-auto absolute bottom-32 left-32">
         <button
           onClick={onToggle}
-          className={`px-8 py-4 backdrop-blur-md cursor-pointer z-10 btn-primary rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl ${
-            animationStarted
-              ? "bg-blue-200/20 border-blue-400/30 text-white hover:bg-blue-500/30"
-              : "bg-blue-500/20 border-blue-400/30 text-white hover:bg-blue-500/30"
-          }`}
+          className={`btn btn-secondary ${animationStarted} rounded-2xl text-3xl font-semibold px-8 py-8  cursor-pointer z-10 transition-all  transform hover:scale-105 hover:shadow-xl`}
         >
-          {animationStarted ? "Move Back" : "Dont´t Push !"}
+          {animationStarted ? "Stopp" : "Dont´t Push !"}
         </button>
       </div>
-
-      {/* Keyframes ausgelagert nach src/styles/animations.css */}
     </>
   );
 };

@@ -30,10 +30,10 @@ export function Hero() {
             onToggle={toggleLogoAnimation}
           />
         </Suspense>
-        <div className="hero-content text-neutral-content flex flex-col items-center justify-start h-full pt-16">
+        <div className="hero-content text-neutral-content flex flex-col items-center justify-start h-full pt-15">
           <div className="max-w-md w-full flex flex-col items-center">
-            <h1 className="mb-5 text-9xl font-bold text-center z-50">
-              Web-Softwareentwickler
+            <h1 className="mb-5 text-hero  font-bold text-center z-50">
+              Webentwickler
             </h1>
           </div>
         </div>
