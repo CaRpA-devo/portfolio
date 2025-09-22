@@ -1,8 +1,8 @@
 export function About() {
   return (
     <>
-      <div class="flex w-full flex-col">
-        <div class="card bg-base-300 p-8 rounded-box flex place-items-center">
+      <div className="flex w-full flex-col">
+        <div className="card bg-base-300 p-8 rounded-box flex place-items-center">
           content Lorem ipsum dolor sit amet, consectetur adipisicing elit.
           Repudiandae sunt neque dolorem velit! Earum dolorum ad minus veniam
           illum, maxime quibusdam cupiditate adipisci. Possimus delectus,
