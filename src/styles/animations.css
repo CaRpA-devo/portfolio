@@ -1,0 +1,30 @@
+@keyframes fly {
+  0% {
+    transform: translate3d(var(--start-x), var(--start-y), 0)
+      rotate(var(--start-rot));
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate3d(var(--mid-x), var(--mid-y), 0) rotate(var(--mid-rot));
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate3d(var(--end-x), var(--end-y), 0) rotate(var(--end-rot));
+    opacity: 0;
+  }
+}
+
+.flying-logo {
+  animation-name: fly;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  will-change: transform, opacity;
+  contain: layout paint style;
+  backface-visibility: hidden;
+}

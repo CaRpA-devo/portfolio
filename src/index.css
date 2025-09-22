@@ -37,3 +37,5 @@
   --depth: 1;
   --noise: 1;
 }
+
+@import "./styles/animations.css";

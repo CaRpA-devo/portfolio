@@ -1,9 +1,12 @@
-import HeroSection from "../atoms/flyinglogos.comp";
+import FlyingLogos from "../atoms/flyinglogos.comp";
 import SplashCursor from "../atoms/splashcursor.comp";
 import { useRef } from "react";
+import { useFlyingLogos } from "../../hooks/useFlyingLogos";
 
 export function Hero() {
   const heroRef = useRef(null);
+  const { flyingLogos, animationStarted, toggleLogoAnimation } =
+    useFlyingLogos();
 
   return (
     <>
@@ -18,7 +21,11 @@ export function Hero() {
         }}
       >
         <SplashCursor targetRef={heroRef} />
-        <HeroSection />
+        <FlyingLogos
+          flyingLogos={flyingLogos}
+          animationStarted={animationStarted}
+          onToggle={toggleLogoAnimation}
+        />
         <div className="hero-content text-neutral-content flex flex-col items-center justify-start h-full pt-16">
           <div className="max-w-md w-full flex flex-col items-center">
             <h1 className="mb-5 text-9xl font-bold text-center z-50">
