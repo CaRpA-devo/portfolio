@@ -1,4 +1,39 @@
 @import "tailwindcss";
 @plugin "daisyui" {
-  themes: light --default, dark --prefersdark, halloween;
+  themes: light --default, dark --prefersdark, Carpa;
+}
+
+@plugin "daisyui/theme" {
+  name: "Carpa";
+  default: false;
+  prefersdark: false;
+  color-scheme: "dark";
+  --color-base-100: oklch(12% 0.042 264.695);
+  --color-base-200: oklch(13% 0.028 261.692);
+  --color-base-300: oklch(21% 0.034 264.665);
+  --color-base-content: oklch(97% 0.001 106.424);
+  --color-primary: oklch(45% 0.24 277.023);
+  --color-primary-content: oklch(98% 0.016 73.684);
+  --color-secondary: oklch(43% 0.232 292.759);
+  --color-secondary-content: oklch(98% 0.022 95.277);
+  --color-accent: oklch(51% 0.253 323.949);
+  --color-accent-content: oklch(98% 0.026 102.212);
+  --color-neutral: oklch(20% 0.042 265.755);
+  --color-neutral-content: oklch(98% 0.001 106.423);
+  --color-info: oklch(68% 0.169 237.323);
+  --color-info-content: oklch(98% 0.019 200.873);
+  --color-success: oklch(60% 0.25 292.717);
+  --color-success-content: oklch(98% 0.018 155.826);
+  --color-warning: oklch(71% 0.202 349.761);
+  --color-warning-content: oklch(98% 0.016 73.684);
+  --color-error: oklch(71% 0.203 305.504);
+  --color-error-content: oklch(97% 0.014 343.198);
+  --radius-selector: 2rem;
+  --radius-field: 1rem;
+  --radius-box: 0.25rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 1;
 }
