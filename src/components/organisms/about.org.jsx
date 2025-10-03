@@ -1,12 +1,13 @@
 import TiltedCard from "../animations/tiltedCard.comp.jsx";
+import { Button } from "../atoms/button.comp.jsx";
 
-export function About() {
+export default function About() {
   return (
     <>
-      <section className="flex bg-base-100 justify-between  p-32">
+      <section className="flex bg-base-100 justify-between flex-wrap md:flex-nowrap p-16 ">
         {/* // Content links */}
-        <div className="flex w-full  ">
-          <div className=" flex flex-col text-lime-100 text-2xl text-center gap-8  ">
+        <div className="flex w-full flex-col ">
+          <div className=" flex flex-col pb-8 md:pb-0 text-lime-100 text-2xl text-center items-center gap-4  ">
             <h2 className="text-6xl text-cyan-600 font-bold">ABOUT ME</h2>
 
             <p>
@@ -24,24 +25,15 @@ export function About() {
               großartige Projekte um!
               <br />
             </p>
+            {/* TODO ID anpasse für Hire ME */}
+            <Button scrollToId="kontakt">Hire me !</Button>
           </div>
         </div>
         {/* // Content rechts */}
-        <div
-          className="flex w-full flex-col rounded-2xl pr-16 object-cover 
-                 contrast-125 saturate-125 brightness-105 
-                 shadow-lg place-items-end hover:shadow-[0_0_15px_rgba(128,0,255,0.8)]"
-        >
+        <div className="w-full   ">
           <TiltedCard
-            imageSrc="src/assets/img/me.jpg"
+            imageSrc="/src/assets/img"
             altText="Bild von einem Cyborg mit Programmiersprachen"
-            containerHeight="300px"
-            containerWidth="300px"
-            imageHeight="400px"
-            imageWidth="400px"
-            rotateAmplitude={18}
-            scaleOnHover={1.4}
-            className="rounded-2xl object-cover contrast-125 saturate-125 brightness-105 shadow-lg hover:shadow-[0_0_15px_rgba(128,0,255,0.8)]"
           />
         </div>
       </section>

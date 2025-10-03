@@ -86,11 +86,13 @@ export function useFlyingLogos(options = {}) {
   /**
    * Startet die Animation: initiale Logos erstellen und anschließend periodisch
    * neue hinzufügen. Falls bereits aktiv, wird nichts erneut gestartet.
+   * Lazy Loading: Animation startet erst beim ersten Klick.
    */
   const startAnimation = useCallback(() => {
     if (intervalIdRef.current) return;
     setAnimationStarted(true);
 
+    // Nur wenige initiale Logos für bessere Performance
     const initialLogos = Array.from(
       { length: Math.min(initialCount ?? 10, maxLogos) },
       generateRandomLogo
@@ -99,17 +101,23 @@ export function useFlyingLogos(options = {}) {
 
     const interval = setInterval(() => {
       setFlyingLogos((current) => {
+        const now = Date.now();
         // Alte Logos entfernen, wenn deren geplante Animationszeit abgelaufen ist
         const filtered = current.filter(
           (logo) =>
-            Date.now() - logo.createdAt < (logo.duration + logo.delay) * 1000
+            now - logo.createdAt < (logo.duration + logo.delay + 2) * 1000 // +2s Puffer
         );
-        // Neue Logos hinzufügen und maximale Anzahl begrenzen
-        const newLogos = Array.from(
-          { length: batchPerTick ?? 2 },
-          generateRandomLogo
-        );
-        return [...filtered, ...newLogos].slice(-maxLogos);
+
+        // Nur neue Logos hinzufügen wenn unter der Maximalanzahl
+        if (filtered.length < maxLogos) {
+          const newLogos = Array.from(
+            { length: Math.min(batchPerTick ?? 1, maxLogos - filtered.length) },
+            generateRandomLogo
+          );
+          return [...filtered, ...newLogos];
+        }
+
+        return filtered;
       });
     }, intervalMs);
 

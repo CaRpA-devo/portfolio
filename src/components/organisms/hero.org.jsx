@@ -3,7 +3,7 @@ const FlyingLogos = lazy(() => import("../animations/flyinglogos.comp"));
 const SplashCursor = lazy(() => import("../animations/splashcursor.comp"));
 import { useFlyingLogos } from "../../hooks/useFlyingLogos";
 
-export function Hero() {
+export default function Hero() {
   const heroRef = useRef(null);
   const { flyingLogos, animationStarted, toggleLogoAnimation } =
     useFlyingLogos();
@@ -11,8 +11,10 @@ export function Hero() {
   return (
     <>
       <div
+        // TODO die id muss wieder raus nur zu test zwecken
+        id="kontakt"
         ref={heroRef}
-        className="hero min-h-[750px] bg-cover bg-center contrast-110 saturate-125 brightness-105"
+        className="hero min-h-screen bg-cover bg-center contrast-110 saturate-125 brightness-105"
         style={{
           backgroundImage: 'url("src/assets/img/bgnew.jpg")',
           position: "relative",
@@ -32,8 +34,8 @@ export function Hero() {
             onToggle={toggleLogoAnimation}
           />
         </Suspense>
-        <div className="hero-content  flex flex-col items-center justify-start h-full pt-15">
-          <div className="max-w-md w-full flex flex-col items-center">
+        <div className="hero-content  flex flex-col items-center justify-start h-full md:pt-15 pt-40">
+          <div className="max-w-md w-full flex flex-col  items-center">
             <h1 className="mb-5 text-hero text-lime-100 font-bold text-center z-50">
               Webentwickler
             </h1>

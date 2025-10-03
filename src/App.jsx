@@ -1,9 +1,12 @@
 import "./index.css";
 import "./App.css";
+import { lazy } from "react";
 import { Navbar } from "./components/organisms/navbar.org";
 import { Footer } from "./components/organisms/footer.org";
-import { Hero } from "./components/organisms/hero.org";
-import { About } from "./components/organisms/about.org";
+import { Skills } from "./components/organisms/skills.org";
+const Hero = lazy(() => import("./components/organisms/hero.org"));
+const About = lazy(() => import("./components/organisms/about.org"));
+// TODO lazyloading und Router?
 
 function App() {
   return (
@@ -11,6 +14,7 @@ function App() {
       <Navbar />
       <Hero />
       <About />
+      <Skills />
       <Footer />
     </>
   );

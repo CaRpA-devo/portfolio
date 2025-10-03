@@ -1,8 +1,8 @@
 // Sammlung der verfügbaren Logos (Platzhalter); ersetze durch echte Logos/Branding
 export const LOGO_DATA = [
-  { name: "TechCorp", color: "from-blue-500 to-purple-600" },
-  { name: "StartupX", color: "from-green-500 to-teal-600" },
-  { name: "DesignHub", color: "from-pink-500 to-rose-600" },
+  { name: "TechCorp", src: "/logo.jpg", alt: "TechCorp Logo" },
+  { name: "StartupX", src: "/logo2.jpg", alt: "StartupX" },
+  { name: "DesignHub", src: "/carpa-logo.webp", alt: "DesignHub" },
   { name: "CodeLab", color: "from-yellow-500 to-orange-600" },
   { name: "InnovateNow", color: "from-indigo-500 to-blue-600" },
   { name: "CreativeFlow", color: "from-purple-500 to-pink-600" },

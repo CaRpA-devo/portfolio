@@ -1,6 +1,8 @@
 import { useRef, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
+
 import "../animations/tiltedCard.style.css";
+import { Tilted_Card_Config } from "../../config/tiltedCard.config";
 
 const springValues = {
   damping: 30,
@@ -8,21 +10,23 @@ const springValues = {
   mass: 2,
 };
 
-export default function TiltedCard({
-  imageSrc,
-  altText = "Tilted card image",
-  captionText = "",
-  containerHeight = "300px",
-  containerWidth = "100%",
-  imageHeight = "300px",
-  imageWidth = "300px",
-  scaleOnHover = 1.1,
-  rotateAmplitude = 14,
-  showMobileWarning = true,
-  showTooltip = true,
-  overlayContent = null,
-  displayOverlayContent = false,
-}) {
+export default function TiltedCard() {
+  const entpacke_Tilted_config = () => ({ ...Tilted_Card_Config });
+  const {
+    imageSrc,
+    altText,
+    containerHeight,
+    containerWidth,
+    imageHeight,
+    imageWidth,
+    scaleOnHover,
+    rotateAmplitude,
+    showTooltip,
+    overlayContent,
+    displayOverlayContent,
+    className,
+  } = entpacke_Tilted_config();
+
   const ref = useRef(null);
 
   const x = useMotionValue();
@@ -76,7 +80,8 @@ export default function TiltedCard({
   return (
     <figure
       ref={ref}
-      className="tilted-card-figure"
+      className="tilted-card-figure  rounded-2xl
+                 contrast-125 saturate-125 brightness-105 "
       style={{
         height: containerHeight,
         width: containerWidth,
@@ -85,14 +90,8 @@ export default function TiltedCard({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      {showMobileWarning && (
-        <div className="tilted-card-mobile-alert">
-          This effect is not optimized for mobile. Check on desktop.
-        </div>
-      )}
-
       <motion.div
-        className="tilted-card-inner"
+        className="tilted-card-inner  "
         style={{
           width: imageWidth,
           height: imageHeight,
@@ -101,16 +100,16 @@ export default function TiltedCard({
           scale,
         }}
       >
+        {/* TODO mit oder ohne cursor */}
         <motion.img
           src={imageSrc}
           alt={altText}
-          className="tilted-card-img"
+          className="tilted-card-img  hover:shadow-[0_0_15px_rgba(128,0,255,0.8)]"
           style={{
             width: imageWidth,
             height: imageHeight,
           }}
         />
-
         {displayOverlayContent && overlayContent && (
           <motion.div className="tilted-card-overlay">
             {overlayContent}
@@ -127,9 +126,7 @@ export default function TiltedCard({
             opacity,
             rotate: rotateFigcaption,
           }}
-        >
-          {captionText}
-        </motion.figcaption>
+        ></motion.figcaption>
       )}
     </figure>
   );
