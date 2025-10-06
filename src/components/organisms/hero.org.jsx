@@ -34,9 +34,10 @@ export default function Hero() {
             onToggle={toggleLogoAnimation}
           />
         </Suspense>
-        <div className="hero-content  flex flex-col items-center justify-start h-full md:pt-15 pt-40">
-          <div className="max-w-md w-full flex flex-col  items-center">
-            <h1 className="mb-5 text-hero text-lime-100 font-bold text-center z-50">
+        <div className="flex flex-col items-center z-50 justify-start h-full ">
+          <div className="max-w-md w-full flex flex-col items-center  gap-0">
+            <h2 className=" text-8xl md:pt-15 pt-30  font-bold">CarPa</h2>
+            <h1 className="   md:text-9xl text-6xl font-bold text-center ">
               Webentwickler
             </h1>
           </div>
