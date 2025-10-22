@@ -16,7 +16,7 @@ export default function Projects() {
   const { stats } = useProjects();
 
   return (
-    <section id="projekte" className="py-16 bg-gray-900">
+    <section id="projekte" className="py-16 bg-base-100">
       <div className="container mx-auto px-4">
         {/* Header */}
         <ProjectsHeader />

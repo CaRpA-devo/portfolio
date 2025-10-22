@@ -50,8 +50,12 @@ export function SkillCards({
       <div className="relative bg-black/40 p-2 rounded-b-xl text-center z-20 min-h-[60px] flex flex-col justify-center">
         <h1 className="text-sm md:text-xl font-bold text-cyan-200 break-words">
           {title}
-          {/* Prozentzahl nur auf Mobile anzeigen */}
-          <span className="md:hidden ml-1 text-cyan-400 text-sm">
+          {/* Prozentzahl auf Mobile immer anzeigen, auf Desktop nur beim Hovern */}
+          <span
+            className={`ml-1 md:text-cyan-400  text-bold md:text-xl text-sm ${
+              hover ? "md:inline" : "md:hidden"
+            }`}
+          >
             {hoverHeight}
           </span>
         </h1>
