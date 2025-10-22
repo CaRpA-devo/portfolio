@@ -1,14 +1,14 @@
 // Zentrale Konfiguration für die fliegenden Logos
 export const FLYING_LOGOS_CONFIG = {
-  maxLogos: 8, // Weniger Logos für bessere Performance
-  intervalMs: 2000, // Längere Intervalle
-  initialCount: 3, // Weniger initiale Logos
-  batchPerTick: 1, // Nur ein Logo pro Batch
+  maxLogos: 6, // Noch weniger Logos für bessere Performance
+  intervalMs: 2000, // Noch längere Intervalle
+  initialCount: 4, // Noch weniger initiale Logos
+  batchPerTick: 3, // Nur ein Logo pro Batch
   startOffsetX: -50,
   endOffsetX: 50,
-  sizeRange: [80, 120], // Größere Logos
-  durationRange: [5, 10], // Sehr lange Animation
-  delayRange: [0, 2], // Weniger Delay
-  curveRange: [-50, 50], // Weniger extreme Kurven
+  sizeRange: [60, 100], // Kleinere Logos für bessere Performance
+  durationRange: [3, 6], // Kürzere Animation
+  delayRange: [0, 1], // Weniger Delay
+  curveRange: [-30, 30], // Weniger extreme Kurven
   verticalPadding: 100, // px vom oberen/unteren Rand
 };

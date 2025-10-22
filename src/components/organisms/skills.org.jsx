@@ -12,7 +12,7 @@ export function Skills() {
   return (
     <>
       <section className="flex gap-4 flex-col p-16  justify-center text-center text-lime-100 text-xl bg-[#01061a]">
-        <h2 className="text-6xl text-cyan-600 font-bold">
+        <h2 id="skills" className="text-6xl text-cyan-600 font-bold">
           Meine Fähigkeiten und Erfahrungen
         </h2>
         <h3>

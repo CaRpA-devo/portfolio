@@ -23,8 +23,24 @@
 .flying-logo {
   animation-name: fly;
   animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   will-change: transform, opacity;
   contain: layout paint style;
   backface-visibility: hidden;
+}
+
+/* Explizit für Touch-Geräte aktivieren */
+@media (max-width: 768px), (hover: none) {
+  .flying-logo {
+    animation-play-state: running !important;
+    -webkit-animation-play-state: running !important;
+  }
+}
+
+/* Animation-Trigger-Klasse */
+.animate-fly {
+  animation-name: fly !important;
+  animation-timing-function: ease-in-out !important;
+  animation-iteration-count: 1 !important;
+  animation-fill-mode: both !important;
 }

@@ -94,7 +94,7 @@ export function useFlyingLogos(options = {}) {
 
     // Nur wenige initiale Logos für bessere Performance
     const initialLogos = Array.from(
-      { length: Math.min(initialCount ?? 10, maxLogos) },
+      { length: Math.min(initialCount ?? 3, maxLogos) },
       generateRandomLogo
     );
     setFlyingLogos(initialLogos);
@@ -105,7 +105,7 @@ export function useFlyingLogos(options = {}) {
         // Alte Logos entfernen, wenn deren geplante Animationszeit abgelaufen ist
         const filtered = current.filter(
           (logo) =>
-            now - logo.createdAt < (logo.duration + logo.delay + 2) * 1000 // +2s Puffer
+            now - logo.createdAt < (logo.duration + logo.delay + 1) * 1000 // +1s Puffer
         );
 
         // Nur neue Logos hinzufügen wenn unter der Maximalanzahl
@@ -137,6 +137,18 @@ export function useFlyingLogos(options = {}) {
   }, []);
 
   /**
+   * Cleanup-Funktion für bessere Performance
+   */
+  const cleanupOldLogos = useCallback(() => {
+    setFlyingLogos((current) => {
+      const now = Date.now();
+      return current.filter(
+        (logo) => now - logo.createdAt < (logo.duration + logo.delay + 1) * 1000
+      );
+    });
+  }, []);
+
+  /**
    * Komfort-Handler zum Umschalten zwischen Start und Stop.
    */
   const toggleLogoAnimation = useCallback(() => {
@@ -156,6 +168,14 @@ export function useFlyingLogos(options = {}) {
       }
     };
   }, []);
+
+  // Zusätzlicher Cleanup alle 5 Sekunden für bessere Performance
+  useEffect(() => {
+    if (!animationStarted) return;
+
+    const cleanupInterval = setInterval(cleanupOldLogos, 5000);
+    return () => clearInterval(cleanupInterval);
+  }, [animationStarted, cleanupOldLogos]);
 
   // Öffentliche API des Hooks
   return {

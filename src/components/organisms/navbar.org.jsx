@@ -1,4 +1,5 @@
 import { SocialLinks } from "../molecules/links.comp";
+import { ScrollToTop } from "../atoms/scrolltotop.comp";
 
 export function Navbar() {
   return (
@@ -8,7 +9,7 @@ export function Navbar() {
         <div className="navbar-center   flex items-center transition-colors duration-300">
           <a
             href="/"
-            className="flex text-cyan-400  rounded-2xl p-2 items-center justify-center gap-2 btn-ghost text-4xl transition-transform hover:scale-105 hover:shadow-[0_0_15px_rgba(128,0,255,0.8)]"
+            className="flex text-cyan-600  rounded-2xl p-2 items-center justify-center gap-2 btn-ghost text-4xl transition-transform hover:scale-105 hover:shadow-[0_0_15px_rgba(128,0,255,0.8)]"
           >
             <img
               src="/logo2.jpg"
@@ -18,6 +19,11 @@ export function Navbar() {
             CarPa
           </a>
         </div>
+      </div>
+
+      {/* Nach oben Button - Mitte */}
+      <div className="navbar-center">
+        <ScrollToTop />
       </div>
 
       {/* Navbar rects mit Links */}

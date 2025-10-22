@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
 import "../animations/tiltedCard.style.css";
@@ -24,10 +24,10 @@ export default function TiltedCard() {
     showTooltip,
     overlayContent,
     displayOverlayContent,
-    className,
   } = entpacke_Tilted_config();
 
   const ref = useRef(null);
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
 
   const x = useMotionValue();
   const y = useMotionValue();
@@ -43,8 +43,24 @@ export default function TiltedCard() {
 
   const [lastY, setLastY] = useState(0);
 
+  // Touch-Gerät erkennen
+  useEffect(() => {
+    const checkTouchDevice = () => {
+      setIsTouchDevice(
+        "ontouchstart" in window ||
+          navigator.maxTouchPoints > 0 ||
+          window.matchMedia("(max-width: 768px)").matches
+      );
+    };
+
+    checkTouchDevice();
+    window.addEventListener("resize", checkTouchDevice);
+
+    return () => window.removeEventListener("resize", checkTouchDevice);
+  }, []);
+
   function handleMouse(e) {
-    if (!ref.current) return;
+    if (!ref.current || isTouchDevice) return;
 
     const rect = ref.current.getBoundingClientRect();
     const offsetX = e.clientX - rect.left - rect.width / 2;
@@ -65,11 +81,15 @@ export default function TiltedCard() {
   }
 
   function handleMouseEnter() {
+    if (isTouchDevice) return;
+
     scale.set(scaleOnHover);
     opacity.set(1);
   }
 
   function handleMouseLeave() {
+    if (isTouchDevice) return;
+
     opacity.set(0);
     scale.set(1);
     rotateX.set(0);
@@ -86,9 +106,9 @@ export default function TiltedCard() {
         height: containerHeight,
         width: containerWidth,
       }}
-      onMouseMove={handleMouse}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      onMouseMove={!isTouchDevice ? handleMouse : undefined}
+      onMouseEnter={!isTouchDevice ? handleMouseEnter : undefined}
+      onMouseLeave={!isTouchDevice ? handleMouseLeave : undefined}
     >
       <motion.div
         className="tilted-card-inner  "

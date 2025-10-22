@@ -1,8 +1,8 @@
-import React from "react";
+import React, { memo } from "react";
 import { Button } from "../atoms/button.comp";
 
 // Präsentationskomponente: erwartet Daten/Steuerung über Props
-const FlyingLogos = ({ flyingLogos, animationStarted, onToggle }) => {
+const FlyingLogos = memo(({ flyingLogos, animationStarted, onToggle }) => {
   return (
     <>
       {/* Fliegende Logos - absolut positioniert über der Hero */}
@@ -10,7 +10,7 @@ const FlyingLogos = ({ flyingLogos, animationStarted, onToggle }) => {
         {flyingLogos.map((logo) => (
           <div
             key={logo.id}
-            className={`absolute flex items-center rounded-4xl justify-center flying-logo`}
+            className="absolute flex items-center rounded-4xl justify-center flying-logo"
             style={{
               width: `${logo.size}px`,
               height: `${logo.size}px`,
@@ -62,8 +62,8 @@ const FlyingLogos = ({ flyingLogos, animationStarted, onToggle }) => {
         ))}
       </div>
 
-      {/* Start/Stop Toggle Button - absolut positioniert */}
-      <div className="w-full flex justify-start mt-auto absolute bottom-32 left-32">
+      {/* Start/Stop Toggle Button - nur auf Desktop */}
+      <div className="hidden md:flex w-full justify-start mt-auto absolute bottom-32 left-32">
         <Button
           onClick={() => {
             if (animationStarted) {
@@ -81,6 +81,8 @@ const FlyingLogos = ({ flyingLogos, animationStarted, onToggle }) => {
       </div>
     </>
   );
-};
+});
+
+FlyingLogos.displayName = "FlyingLogos";
 
 export default FlyingLogos;

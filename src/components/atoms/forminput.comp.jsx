@@ -19,12 +19,9 @@ export function FormInput({
           pattern={pattern}
           minLength={minLength}
           maxLength={maxLength}
-          className={`flex-1 ${className}`}
+          title={title}
+          className={`flex-1 text-lg ${className}`}
         />
-        {/* Custom Tooltip */}
-        <span className="absolute left-0 -top-6 bg-primary text-white text-sm px-2 py-1 rounded opacity-0 hover:opacity-100 transition-opacity">
-          {title}
-        </span>
       </label>
     </>
   );

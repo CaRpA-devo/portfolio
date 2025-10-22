@@ -27,14 +27,19 @@ export default function About() {
             </p>
             <div className="flex gap-4">
               <Button scrollToId="kontakt">Kontakt</Button>
-              <a
-                href="/src/assets/cv.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-primary text-lime-100 rounded-2xl md:text-3xl text-xl font-semibold md:px-8 px-6 py-2 cursor-pointer z-10 transition-all transform hover:scale-105 hover:shadow-xl hover:bg-cyan-800  "
+              <button
+                onClick={() => {
+                  // Immer mit window.open öffnen für bessere Kompatibilität
+                  window.open(
+                    "./src/assets/cv.pdf",
+                    "_blank",
+                    "noopener,noreferrer"
+                  );
+                }}
+                className="bg-primary text-lime-100 rounded-2xl md:text-3xl text-xl font-semibold md:px-8 px-6 py-2 cursor-pointer z-10 transition-all transform hover:scale-105 hover:shadow-xl hover:bg-cyan-800"
               >
                 Lebenslauf
-              </a>
+              </button>
             </div>
           </div>
         </div>
