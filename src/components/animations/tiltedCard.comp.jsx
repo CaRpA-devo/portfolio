@@ -125,7 +125,6 @@ export default function TiltedCard() {
           scale,
         }}
       >
-        {/* TODO mit oder ohne cursor */}
         <motion.img
           src={imageSrc}
           alt={altText}
