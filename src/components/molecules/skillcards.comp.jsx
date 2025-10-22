@@ -10,7 +10,7 @@ export function SkillCards({
 
   return (
     <div
-      className="relative h-40 flex flex-col justify-end rounded-xl shadow hover:scale-105 transition-transform overflow-hidden group"
+      className="relative md:h-50 h-30 flex flex-col justify-end rounded-xl shadow hover:scale-105 hover:shadow-[0_4px_15px_2px_rgba(128,0,255,0.6)] transition-transform overflow-hidden group"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >

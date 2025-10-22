@@ -25,8 +25,17 @@ export default function About() {
               großartige Projekte um!
               <br />
             </p>
-            {/* TODO ID anpasse für Hire ME */}
-            <Button scrollToId="kontakt">Hire me !</Button>
+            <div className="flex gap-4">
+              <Button scrollToId="kontakt">Kontakt</Button>
+              <a
+                href="/src/assets/cv.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-primary text-lime-100 rounded-2xl md:text-3xl text-xl font-semibold md:px-8 px-6 py-2 cursor-pointer z-10 transition-all transform hover:scale-105 hover:shadow-xl hover:bg-cyan-800  "
+              >
+                Lebenslauf
+              </a>
+            </div>
           </div>
         </div>
         {/* // Content rechts */}

@@ -11,8 +11,6 @@ export default function Hero() {
   return (
     <>
       <div
-        // TODO die id muss wieder raus nur zu test zwecken
-        id="kontakt"
         ref={heroRef}
         className="hero min-h-screen bg-cover bg-center contrast-110 saturate-125 brightness-105"
         style={{
@@ -36,9 +34,8 @@ export default function Hero() {
         </Suspense>
         <div className="flex flex-col items-center z-50 justify-start h-full ">
           <div className="max-w-md w-full flex flex-col items-center  gap-0">
-            <h2 className=" text-8xl md:pt-15 pt-30  font-bold">CarPa</h2>
             <h1 className="   md:text-9xl text-6xl font-bold text-center ">
-              Webentwickler
+              Junior Webentwickler
             </h1>
           </div>
         </div>
