@@ -2,8 +2,13 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { LOGO_DATA } from "../data/flyingLogos";
 import { FLYING_LOGOS_CONFIG } from "../config/flyingLogos.config";
 
-//use Flyinglogos
-
+/**
+ * useFlyingLogos Hook - Verwaltung der FlyingLogos-Animation
+ *
+ * Dieser Custom Hook verwaltet die komplette Logik für die FlyingLogos-Animation
+ * in der Hero-Sektion. Er bietet eine saubere API für die Steuerung der Animation
+ * und optimiert die Performance durch Memoization.
+ */
 export function useFlyingLogos(options = {}) {
   // Konfiguration zusammenführen (Defaults + Option-Overrides), memoisieren
   const cfg = useMemo(

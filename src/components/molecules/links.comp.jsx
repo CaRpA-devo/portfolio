@@ -1,8 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import { Icon } from "@iconify/react";
 
+// Social Links Konfiguration
 const socialLinks = [
-  // TODO Links einfügen
   {
     icon: "mdi:github",
     url: "https://github.com/CaRpA-devo",
@@ -16,8 +16,18 @@ const socialLinks = [
     isExternal: true,
   },
   { icon: "mdi:school", url: "#skills", name: "Skills", isExternal: false },
+  {
+    icon: "mdi:folder-multiple",
+    url: "#projekte",
+    name: "Projekte",
+    isExternal: false,
+  },
 ];
 
+/**
+ * SocialLinks - Navigation mit Social Media Links und internen Links
+ * Features: Desktop/Mobile responsive, Dropdown auf Mobile, Touch-optimiert
+ */
 export function SocialLinks({ className = "" }) {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null); // Ref auf das Dropdown
@@ -88,9 +98,9 @@ export function SocialLinks({ className = "" }) {
             target={link.isExternal ? "_blank" : "_self"}
             rel={link.isExternal ? "noopener noreferrer" : ""}
             onClick={(e) => handleLinkClick(e, link)}
-            className="rounded-xl transition-transform hover:scale-105 hover:shadow-[0_0_15px_rgba(128,0,255,0.8)] active:scale-105 active:shadow-[0_0_15px_rgba(128,0,255,0.8)] text-cyan-600"
+            className="rounded-lg transition-transform hover:scale-105 hover:shadow-[0_0_15px_rgba(128,0,255,0.8)] active:scale-105 active:shadow-[0_0_15px_rgba(128,0,255,0.8)] text-cyan-600"
           >
-            <Icon icon={link.icon} width="40" height="40" />
+            <Icon icon={link.icon} width="32" height="32" />
           </a>
         ))}
       </div>
@@ -107,7 +117,7 @@ export function SocialLinks({ className = "" }) {
           onMouseEnter={() => setIsOpen(true)}
           className="p-2 rounded-2xl text-cyan-600 transition-transform hover:scale-105 hover:shadow-[0_0_15px_rgba(128,0,255,0.8)] active:scale-105 active:shadow-[0_0_15px_rgba(128,0,255,0.8)]"
         >
-          <Icon icon="mdi:hamburger-menu" width="40" height="40" />
+          <Icon icon="mdi:hamburger-menu" width="32" height="32" />
         </button>
 
         {isOpen && (
@@ -121,7 +131,7 @@ export function SocialLinks({ className = "" }) {
                 onClick={(e) => handleLinkClick(e, link)}
                 className="flex items-center rounded-2xl h-12 justify-start gap-2 p-4 transition-transform hover:scale-105 hover:shadow-[0_0_15px_rgba(128,0,255,0.8)] active:scale-105 active:shadow-[0_0_15px_rgba(128,0,255,0.8)] text-cyan-600"
               >
-                <Icon icon={link.icon} width="48" height="48" />
+                <Icon icon={link.icon} width="32" height="32" />
                 <span className="font-medium text-xl">{link.name}</span>
               </a>
             ))}

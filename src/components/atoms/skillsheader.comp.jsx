@@ -1,3 +1,7 @@
+/**
+ * SkillsHeader - Header für Skills-Kategorien
+ * Features: Titel mit Emoji, Border, responsive Design
+ */
 export function SkillsHeader({
   title,
   emoji,
@@ -7,7 +11,7 @@ export function SkillsHeader({
   return (
     <>
       <div
-        className={`flex text-center  justify-center  text-6xl font-bold text-cyan-600 ${className} border-b border-purple-500/50 `}
+        className={`flex text-center justify-center text-6xl font-bold text-cyan-600 ${className} border-b border-purple-500/50`}
       >
         <h2>
           {title} <span className={emojiSize}>{emoji}</span>

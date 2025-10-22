@@ -1,6 +1,20 @@
 "use client";
 import { useEffect, useRef } from "react";
 
+/**
+ * SplashCursor - Flüssigkeits-Simulation bei Mausbewegung
+ * Features: WebGL-Simulation, GPU-Beschleunigung, responsive Design
+ *
+ * Technische Parameter:
+ * - SIM_RESOLUTION: Simulationsauflösung
+ * - DYE_RESOLUTION: Farbauflösung
+ * - DENSITY_DISSIPATION: Dichte-Auflösung
+ * - VELOCITY_DISSIPATION: Geschwindigkeits-Auflösung
+ * - PRESSURE: Druck-Parameter
+ * - CURL: Wirbel-Parameter
+ * - SPLAT_RADIUS: Spritzer-Radius
+ * - SPLAT_FORCE: Spritzer-Kraft
+ */
 function SplashCursor({
   SIM_RESOLUTION = 128,
   DYE_RESOLUTION = 1440,

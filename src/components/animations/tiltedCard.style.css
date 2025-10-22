@@ -1,7 +1,9 @@
+/* TiltedCard 3D-Container mit Perspective */
 .tilted-card-figure {
   position: relative;
   width: 100%;
   height: 100%;
+  /* 3D-Perspective für Tilt-Effekt */
   perspective: 800px;
   display: flex;
   flex-direction: column;
@@ -9,17 +11,21 @@
   justify-content: center;
 }
 
+/* 3D-Transform-Container */
 .tilted-card-inner {
   position: relative;
+  /* 3D-Transforms beibehalten */
   transform-style: preserve-3d;
 }
 
+/* TiltedCard Bild mit Performance-Optimierungen */
 .tilted-card-img {
   position: absolute;
   top: 0;
   left: 0;
   object-fit: cover;
   border-radius: 15px;
+  /* GPU-Beschleunigung für 3D-Transforms */
   will-change: transform;
   transform: translateZ(0);
 }

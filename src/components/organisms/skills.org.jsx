@@ -1,5 +1,9 @@
+// Komponenten Imports
 import { SkillCards } from "../molecules/skillcards.comp.jsx";
 import { GridWrapper } from "../atoms/gridwrapper.comp.jsx";
+import { SkillsHeader } from "../atoms/skillsheader.comp.jsx";
+
+// Skills-Konfigurationen für verschiedene Kategorien
 import {
   Skills_Frontend_Config,
   Skills_Backend_Config,
@@ -7,7 +11,11 @@ import {
   SoftSkills_Config,
   Deployment_Tools_Config,
 } from "../../config/skills.config.js";
-import { SkillsHeader } from "../atoms/skillsheader.comp.jsx";
+
+/**
+ * Skills-Sektion - Zeigt alle Fähigkeiten in kategorisierten Bereichen
+ * Struktur: Frontend, Backend, Tools, Deployment, Soft Skills
+ */
 export function Skills() {
   return (
     <>

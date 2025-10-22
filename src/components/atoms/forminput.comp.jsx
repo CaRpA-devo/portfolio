@@ -1,3 +1,7 @@
+/**
+ * FormInput - Wiederverwendbare Input-Komponente für Formulare
+ * Features: Icon-Support, Validierung, responsive Design
+ */
 export function FormInput({
   type = "text",
   placeholder,
@@ -11,6 +15,7 @@ export function FormInput({
   return (
     <>
       <label className="input validator input-primary flex items-center gap-2">
+        {/* Optionales Icon */}
         {icon && <span className="text-gray-400">{icon}</span>}
         <input
           type={type}

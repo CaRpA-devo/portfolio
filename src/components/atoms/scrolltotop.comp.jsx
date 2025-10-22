@@ -1,22 +1,27 @@
 import { useState, useEffect } from "react";
 import { Icon } from "@iconify/react";
 
+/**
+ * ScrollToTop - Button zum Zurückscrollen nach oben
+ * Features: Erscheint nach 300px scrollen, smooth scroll, Hover-Effekte
+ */
 export function ScrollToTop({ className = "" }) {
+  // State für Button-Sichtbarkeit
   const [showScrollTop, setShowScrollTop] = useState(false);
 
-  // Scroll-Event Listener
+  // Scroll-Event Listener - Zeige Button nach 300px scrollen
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop =
         window.pageYOffset || document.documentElement.scrollTop;
-      setShowScrollTop(scrollTop > 300); // Zeige Button nach 300px scrollen
+      setShowScrollTop(scrollTop > 300);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Nach oben scrollen
+  // Smooth scroll nach oben
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,

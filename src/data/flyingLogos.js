@@ -1,4 +1,11 @@
-// Sammlung der verfügbaren Logos (Platzhalter); ersetze durch echte Logos/Branding
+/**
+ * FlyingLogos Daten - Sammlung der verfügbaren Logos für die Animation
+ *
+ * Struktur:
+ * - src: Pfad zum Logo-Bild
+ * - alt: Alt-Text für Barrierefreiheit
+ *
+ */
 export const LOGO_DATA = [
   {
     src: "/src/assets/img/flyinglogos/logo1.jpg",

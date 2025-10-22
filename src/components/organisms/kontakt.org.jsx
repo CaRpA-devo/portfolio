@@ -1,5 +1,9 @@
 import { FormMail } from "../molecules/formmail.comp";
 
+/**
+ * Kontakt - Kontaktsektion mit Formular
+ * Features: FormMail-Komponente, responsive Design, Scroll-Target
+ */
 export function Kontakt() {
   return (
     <section

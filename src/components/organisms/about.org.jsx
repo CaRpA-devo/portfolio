@@ -1,6 +1,11 @@
+// Komponenten Imports
 import TiltedCard from "../animations/tiltedCard.comp.jsx";
 import { Button } from "../atoms/button.comp.jsx";
 
+/**
+ * About - Über mich Sektion mit persönlicher Vorstellung
+ * Features: TiltedCard-Animation, Kontakt-Button, Lebenslauf-Download, responsive Design
+ */
 export default function About() {
   return (
     <>

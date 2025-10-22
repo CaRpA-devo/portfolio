@@ -1,7 +1,10 @@
 import React, { memo } from "react";
 import { Button } from "../atoms/button.comp";
 
-// Präsentationskomponente: erwartet Daten/Steuerung über Props
+/**
+ * FlyingLogos - Animierte fliegende Logos in der Hero-Sektion
+ * Features: CSS-Animationen, GPU-Beschleunigung, responsive Design, Touch-optimiert
+ */
 const FlyingLogos = memo(({ flyingLogos, animationStarted, onToggle }) => {
   return (
     <>

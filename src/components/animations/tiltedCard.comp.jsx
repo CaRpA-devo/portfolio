@@ -4,12 +4,17 @@ import { motion, useMotionValue, useSpring } from "framer-motion";
 import "../animations/tiltedCard.style.css";
 import { Tilted_Card_Config } from "../../config/tiltedCard.config";
 
+// Framer Motion Spring-Konfiguration für 3D-Effekte
 const springValues = {
   damping: 30,
   stiffness: 100,
   mass: 2,
 };
 
+/**
+ * TiltedCard - 3D-Tilted Card mit Framer Motion
+ * Features: 3D-Rotation, Touch-optimiert, responsive Design, GPU-Beschleunigung
+ */
 export default function TiltedCard() {
   const entpacke_Tilted_config = () => ({ ...Tilted_Card_Config });
   const {

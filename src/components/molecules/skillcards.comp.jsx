@@ -1,16 +1,21 @@
 import { useState } from "react";
 
+/**
+ * SkillCards - Interaktive Skill-Karten mit Hover-Effekten
+ * Features: Hover-Overlay, Touch-optimiert, responsive Design, Prozentzahlen auf Mobile
+ */
 export function SkillCards({
   title,
   description,
   imageSrc,
   hoverHeight = "100%",
 }) {
+  // State für Hover-Effekt (Desktop) und Touch-Effekt (Mobile)
   const [hover, setHover] = useState(false);
 
   return (
     <div
-      className="relative md:h-50 h-30 flex flex-col justify-end rounded-xl shadow hover:scale-105 hover:shadow-[0_4px_15px_2px_rgba(128,0,255,0.6)] active:scale-105 active:shadow-[0_4px_15px_2px_rgba(128,0,255,0.6)] transition-transform overflow-hidden group"
+      className="relative md:h-50 h-30 w-full md:w-auto flex flex-col justify-end rounded-xl shadow hover:scale-105 hover:shadow-[0_4px_15px_2px_rgba(128,0,255,0.6)] active:scale-105 active:shadow-[0_4px_15px_2px_rgba(128,0,255,0.6)] transition-transform overflow-hidden group"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       onTouchStart={() => setHover(true)}
@@ -42,9 +47,15 @@ export function SkillCards({
       />
 
       {/* Text-Overlay */}
-      <div className="relative bg-black/40 p-2 rounded-b-xl text-center z-20">
-        <h1 className="text-xl font-bold text-cyan-200">{title}</h1>
-        {description && <p className="text-gray-200">{description}</p>}
+      <div className="relative bg-black/40 p-2 rounded-b-xl text-center z-20 min-h-[60px] flex flex-col justify-center">
+        <h1 className="text-sm md:text-xl font-bold text-cyan-200 break-words">
+          {title}
+          {/* Prozentzahl nur auf Mobile anzeigen */}
+          <span className="md:hidden ml-1 text-cyan-400 text-sm">
+            {hoverHeight}
+          </span>
+        </h1>
+        {description && <p className="text-gray-200 text-xs">{description}</p>}
       </div>
     </div>
   );

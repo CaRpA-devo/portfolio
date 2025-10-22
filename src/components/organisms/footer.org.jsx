@@ -1,10 +1,13 @@
 import { FooterText } from "../molecules/footertext.org.jsx";
-import { SocialLinks } from "../molecules/links.comp.jsx";
 
+/**
+ * Footer - Website-Footer mit rotierenden Zitaten und Copyright
+ * Features: FooterText-Komponente, Logo, Copyright-Info, responsive Design
+ */
 export function Footer() {
   return (
     <>
-      <footer className="footer footer-horizontal footer-center bg-[#01061a] text-lime-100 p-10">
+      <footer className="footer footer-horizontal footer-center bg-base-100 text-lime-100 p-10">
         <FooterText />
         <aside>
           <p className="font-bold pb-4 text-4xl">CarPa Studios</p>

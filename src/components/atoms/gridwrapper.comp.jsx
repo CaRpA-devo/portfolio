@@ -1,3 +1,7 @@
+/**
+ * GridWrapper - Responsive Grid-Container für Skills
+ * Features: 3 Spalten Mobile, 5 Spalten Desktop, responsive Padding
+ */
 export function GridWrapper({ children }) {
   return (
     <div

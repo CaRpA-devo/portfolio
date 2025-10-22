@@ -1,4 +1,9 @@
+/**
+ * Button - Wiederverwendbare Button-Komponente
+ * Features: Scroll-to-Section, responsive Design, Touch-optimiert
+ */
 export function Button({ children, scrollToId, className = "", ...props }) {
+  // Scroll-Funktion für interne Navigation
   const handleClick = () => {
     if (scrollToId) {
       const section = document.getElementById(scrollToId);
@@ -11,10 +16,9 @@ export function Button({ children, scrollToId, className = "", ...props }) {
 
   return (
     <>
-      {/* TODO villeicht farbe tauschen */}
       <button
         onClick={handleClick}
-        className={`  bg-primary  text-lime-100  rounded-2xl md:text-3xl text-xl font-semibold md:px-8  px-6 py-2 cursor-pointer z-10 transition-all  transform hover:scale-105 hover:shadow-xl hover:bg-cyan-800 active:scale-105 active:shadow-xl active:bg-cyan-800  ${className}`}
+        className={`bg-primary text-lime-100 rounded-2xl md:text-3xl text-xl font-semibold md:px-8 px-6 py-2 cursor-pointer z-10 transition-all transform hover:scale-105 hover:shadow-xl hover:bg-cyan-800 active:scale-105 active:shadow-xl active:bg-cyan-800 ${className}`}
         {...props}
       >
         {children}

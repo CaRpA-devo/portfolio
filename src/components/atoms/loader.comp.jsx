@@ -1,3 +1,7 @@
+/**
+ * Loader - Einfacher Loading-Spinner
+ * Features: DaisyUI Loading-Animation, XL-Größe
+ */
 export function Loader() {
   return (
     <>

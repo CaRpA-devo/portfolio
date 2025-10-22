@@ -2,8 +2,27 @@ import { Icon } from "@iconify/react";
 import { useForm, ValidationError } from "@formspree/react";
 import { FormInput } from "../atoms/forminput.comp";
 import { Button } from "../atoms/button.comp";
+import { useState } from "react";
+
+/**
+ * FormMail - Kontaktformular mit Formspree-Integration
+ * Features: E-Mail, Betreff, Nachricht, Validierung, Success-State, Datenschutz-Checkbox
+ */
 export function FormMail() {
   const [state, handleSubmit] = useForm("mldpydok");
+  const [privacyAccepted, setPrivacyAccepted] = useState(false);
+  const [showPrivacyError, setShowPrivacyError] = useState(false);
+
+  const handleFormSubmit = (e) => {
+    if (!privacyAccepted) {
+      e.preventDefault();
+      setShowPrivacyError(true);
+      return;
+    }
+    setShowPrivacyError(false);
+    handleSubmit(e);
+  };
+
   if (state.succeeded) {
     return (
       <div className="flex items-center  justify-center">
@@ -22,7 +41,7 @@ export function FormMail() {
   return (
     <>
       <form
-        onSubmit={handleSubmit}
+        onSubmit={handleFormSubmit}
         className="flex flex-col items-center justify-center max-w-md mx-auto gap-4 w-full  "
       >
         {/* 📧 E-Mail */}
@@ -75,7 +94,7 @@ export function FormMail() {
             placeholder="Deine Nachricht ..."
             rows="20"
             required
-            className=" text-lime-100 p-1 pl-6 w-full rounded text-lg "
+            className=" text-lime-100 p-1 pl-6 w-full border-none outline-none rounded text-lg "
           ></textarea>
         </label>
         <ValidationError
@@ -83,6 +102,46 @@ export function FormMail() {
           field="message"
           errors={state.errors}
         />
+
+        {/* 🔒 Datenschutz-Checkbox */}
+        <div className="flex items-start gap-3 ">
+          <input
+            type="checkbox"
+            id="privacy"
+            name="privacy"
+            checked={privacyAccepted}
+            onChange={(e) => {
+              setPrivacyAccepted(e.target.checked);
+              if (e.target.checked && showPrivacyError) {
+                setShowPrivacyError(false);
+              }
+            }}
+            required
+            className="mt-1 w-5 h-5 text-cyan-700 bg-gray-800 border-gray-600 rounded"
+          />
+          <label
+            htmlFor="privacy"
+            className="text-sm text-lime-100 leading-relaxed w-2xs"
+          >
+            Ich stimme zu, dass meine Daten vertraulich behandelt werden und nur
+            zur Beantwortung meiner Anfrage verwendet werden.
+            <span className="text-cyan-600 font-semibold">*</span>
+          </label>
+        </div>
+
+        {/* Fehlermeldung für Datenschutz-Checkbox */}
+        {showPrivacyError && (
+          <div className="flex items-center gap-2 text-red-400 text-sm">
+            <Icon
+              icon="material-symbols:error-outline"
+              width="16"
+              height="16"
+              className="text-red-400"
+            />
+            Bitte akzeptiere die Datenschutzbestimmungen, um das Formular zu
+            senden.
+          </div>
+        )}
 
         {/* ✉️ Button */}
         <Button className="px-6 py-2" type="submit" disabled={state.submitting}>

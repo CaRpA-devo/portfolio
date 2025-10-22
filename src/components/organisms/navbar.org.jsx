@@ -1,6 +1,11 @@
+// Komponenten Imports
 import { SocialLinks } from "../molecules/links.comp";
 import { ScrollToTop } from "../atoms/scrolltotop.comp";
 
+/**
+ * Navbar - Hauptnavigation der Website
+ * Features: Logo, Scroll-to-Top Button, Social Links, responsive Design
+ */
 export function Navbar() {
   return (
     <div className="navbar sticky top-0 z-50 bg-gray-900/80 backdrop-blur-md shadow-[0_0_20px_rgba(128,0,255,0.6)] border-b border-purple-500/50">

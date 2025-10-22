@@ -1,35 +1,43 @@
+/* FlyingLogos Animation - CSS Keyframes für fliegende Logos */
 @keyframes fly {
+  /* Start: Unsichtbar am Startpunkt */
   0% {
     transform: translate3d(var(--start-x), var(--start-y), 0)
       rotate(var(--start-rot));
     opacity: 0;
   }
+  /* Fade-in: Wird sichtbar */
   10% {
     opacity: 0.8;
   }
+  /* Mitte: Maximale Sichtbarkeit mit Kurve */
   50% {
     transform: translate3d(var(--mid-x), var(--mid-y), 0) rotate(var(--mid-rot));
     opacity: 1;
   }
+  /* Fade-out: Wird unsichtbar */
   90% {
     opacity: 0.8;
   }
+  /* Ende: Unsichtbar am Endpunkt */
   100% {
     transform: translate3d(var(--end-x), var(--end-y), 0) rotate(var(--end-rot));
     opacity: 0;
   }
 }
 
+/* FlyingLogos Basis-Styling mit Performance-Optimierungen */
 .flying-logo {
   animation-name: fly;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 1;
+  /* GPU-Beschleunigung für bessere Performance */
   will-change: transform, opacity;
   contain: layout paint style;
   backface-visibility: hidden;
 }
 
-/* Explizit für Touch-Geräte aktivieren */
+/* Touch-Geräte: Explizit Animation aktivieren */
 @media (max-width: 768px), (hover: none) {
   .flying-logo {
     animation-play-state: running !important;
@@ -37,7 +45,7 @@
   }
 }
 
-/* Animation-Trigger-Klasse */
+/* JavaScript-Trigger: Animation manuell starten */
 .animate-fly {
   animation-name: fly !important;
   animation-timing-function: ease-in-out !important;

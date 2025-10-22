@@ -1,3 +1,14 @@
+/**
+ * Skills Konfiguration - Technische Fähigkeiten und Soft Skills
+ *
+ * Struktur:
+ * - title: Name der Fähigkeit/Technologie
+ * - imageSrc: Pfad zum Bild der Fähigkeit
+ * - hoverHeight: Prozentzahl für Hover-Effekt (Skill-Level)
+ * - description: Beschreibung der Fähigkeit (optional)
+ */
+
+// Frontend-Technologien
 export const Skills_Frontend_Config = [
   {
     title: "CSS",
@@ -28,6 +39,7 @@ export const Skills_Frontend_Config = [
   },
 ];
 
+// Backend-Technologien
 export const Skills_Backend_Config = [
   {
     title: "Node.js",
@@ -54,6 +66,7 @@ export const Skills_Backend_Config = [
   },
 ];
 
+// Entwicklungstools
 export const Tools_Config = [
   {
     title: "Git",
@@ -97,6 +110,7 @@ export const Tools_Config = [
   },
 ];
 
+// Soft Skills & Persönliche Fähigkeiten
 export const SoftSkills_Config = [
   {
     title: "Teamwork",
@@ -125,6 +139,7 @@ export const SoftSkills_Config = [
   },
 ];
 
+// Deployment & Hosting
 export const Deployment_Tools_Config = [
   {
     title: "Vercel",

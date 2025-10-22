@@ -1,10 +1,22 @@
+// React Imports
 import { lazy, Suspense, useRef, useEffect } from "react";
+
+// Lazy Imports für Performance-Optimierung
 const FlyingLogos = lazy(() => import("../animations/flyinglogos.comp"));
 const SplashCursor = lazy(() => import("../animations/splashcursor.comp"));
+
+// Custom Hook für FlyingLogos-Logik
 import { useFlyingLogos } from "../../hooks/useFlyingLogos";
 
+/**
+ * Hero-Sektion - Hauptsektion der Website mit Animationen
+ * Features: FlyingLogos, SplashCursor, responsive Design
+ */
 export default function Hero() {
+  // Ref für Hero-Container (für Scroll-Detection)
   const heroRef = useRef(null);
+
+  // FlyingLogos-Hook für Animation-Steuerung
   const { flyingLogos, animationStarted, toggleLogoAnimation, stopAnimation } =
     useFlyingLogos();
 
