@@ -40,7 +40,7 @@ export const PROJECTS_DATA = [
     title: "Portfolio Website",
     description:
       "Moderne Portfolio-Website mit React, Tailwind CSS und Framer Motion. Responsive Design mit interaktiven Animationen.",
-    image: "/src/assets/img/projects/porto.png",
+    image: "/img/projects/porto.png",
     technologies: [
       "React",
       "Tailwind CSS",
@@ -58,7 +58,7 @@ export const PROJECTS_DATA = [
     title: "MemoMe – Terminplaner",
     description:
       "MemoMe ist eine kleine React/Vite-App zum Anlegen von Terminen mit Datum und Notiz. Die Einträge werden lokal gespeichert, gruppiert und können als erledigt markiert oder gelöscht werden.",
-    image: "/src/assets/img/projects/terminplaner.png",
+    image: "/img/projects/terminplaner.png",
     technologies: ["React", "Tailwind CSS", "JavaScript", "Toastify"],
 
     githubUrl: "https://github.com/CaRpA-devo/terminplaner",
@@ -69,7 +69,7 @@ export const PROJECTS_DATA = [
     title: "CodeConnect – Entwickler-Bibliothek",
     description:
       "CodeConnect ist eine statische Website, die Webentwickler:innen schnellen Zugang zu Lernmaterial, Tools und Dokus bietet.",
-    image: "/src/assets/img/projects/codeconnect.png",
+    image: "/img/projects/codeconnect.png",
     technologies: ["HTML", "CSS", "CSS3", "Swiper.JS", "Formspree"],
 
     githubUrl: "https://github.com/CaRpA-devo/Bibliothek",
@@ -80,7 +80,7 @@ export const PROJECTS_DATA = [
     title: "To-Do List Web App",
     description:
       "Eine einfache To-Do-Liste zum Erstellen, Abhaken und Löschen von Aufgaben – gespeichert im localStorage.",
-    image: "/src/assets/img/projects/todo.png",
+    image: "/img/projects/todo.png",
     technologies: ["JavaScript", "HTML", "CSS"],
 
     githubUrl: "https://github.com/CaRpA-devo/ToDoListe",
@@ -91,7 +91,7 @@ export const PROJECTS_DATA = [
     title: "Second Brain – Chatbot",
     description:
       "Schlanker JS-Chatbot für Einsteiger — statisches Frontend, ausgeliefert per Express.",
-    image: "/src/assets/img/projects/secondbrain.png",
+    image: "/img/projects/secondbrain.png",
     technologies: ["Node.js", "Express", "JavaScript", "HTML", "CSS"],
 
     githubUrl: "https://github.com/CaRpA-devo/chatbot",
@@ -102,7 +102,7 @@ export const PROJECTS_DATA = [
     title: "Team Task Manager",
     description:
       "Rezept-Finder mit Suchfunktion, Favoriten-System und Nährwert-Informationen für gesunde Ernährung.",
-    image: "/src/assets/img/projects/taskmanager.png",
+    image: "/img/projects/taskmanager.png",
     technologies: [
       "Clerk",
       "React 19",
@@ -120,7 +120,7 @@ export const PROJECTS_DATA = [
     title: "Quiz-App",
     description:
       "Interaktives React/Vite-Quiz mit Lobby, Fragen vom JSON-Server und lokal gespeicherten Spielständen.",
-    image: "/src/assets/img/projects/quizzapp.png",
+    image: "/img/projects/quizzapp.png",
     technologies: [
       "React 19",
       "CSS",
@@ -138,7 +138,7 @@ export const PROJECTS_DATA = [
     title: "Sundive",
     description:
       "Sundive ist eine statische Reise-Website mit Seiten für Strandurlaub, Städte & Specials, komplett in HTML/CSS umgesetzt.",
-    image: "/src/assets/img/projects/sundive.png",
+    image: "/img/projects/sundive.png",
     technologies: ["HTML", "CSS"],
 
     githubUrl: "https://github.com/OuzoPator/sundive",
@@ -149,7 +149,7 @@ export const PROJECTS_DATA = [
     title: "ProPerc – Fullstack Health & Fitness Plattform ",
     description:
       "ProPerc ist eine modulare Web-App für Ernährungsplanung, Training und Fortschritts-Tracking zum schnellen Finden und Filtern von Nährstoffen und Supplements.",
-    image: "/src/assets/img/projects/ProPerc.png",
+    image: "/img/projects/ProPerc.png",
     technologies: [
       "Clerk",
       "React 19",

@@ -36,7 +36,7 @@ export default function About() {
                 onClick={() => {
                   // Immer mit window.open öffnen für bessere Kompatibilität
                   window.open(
-                    "./src/assets/cv.pdf",
+                    "/public/cv.pdf",
                     "_blank",
                     "noopener,noreferrer"
                   );
@@ -51,7 +51,7 @@ export default function About() {
         {/* // Content rechts */}
         <div className="w-full   ">
           <TiltedCard
-            imageSrc="/src/assets/img"
+            imageSrc="/img/me.jpg"
             altText="Bild von einem Cyborg mit Programmiersprachen"
           />
         </div>

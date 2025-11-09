@@ -9,7 +9,7 @@
  * - rotateAmplitude: Rotationsstärke in Grad
  */
 export const Tilted_Card_Config = {
-  imageSrc: "/src/assets/img/me.jpg",
+  imageSrc: "/img/me.jpg",
   altText: "Bild von einem Cyborg mit Programmiersprachen",
 
   imageHeight: "400px",

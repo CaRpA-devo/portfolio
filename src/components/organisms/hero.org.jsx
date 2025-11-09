@@ -45,7 +45,7 @@ export default function Hero() {
         ref={heroRef}
         className="hero min-h-120 md:min-h-screen bg-cover bg-center contrast-110 saturate-125 brightness-105"
         style={{
-          backgroundImage: 'url("src/assets/img/bgnew.jpg")',
+          backgroundImage: 'url("/img/bgnew.jpg")',
           position: "relative",
           overflow: "hidden",
           cursor: "default",

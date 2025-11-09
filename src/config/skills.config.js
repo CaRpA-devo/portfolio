@@ -12,29 +12,29 @@
 export const Skills_Frontend_Config = [
   {
     title: "CSS",
-    imageSrc: "src/assets/img/skills/css.jpg",
+    imageSrc: "/img/skills/css.jpg",
     hoverHeight: "90%",
   },
   {
     title: "HTML",
-    imageSrc: "src/assets/img/skills/html.jpg",
+    imageSrc: "/img/skills/html.jpg",
     hoverHeight: "90%",
   },
 
   {
     title: "React",
-    imageSrc: "src/assets/img/skills/react.jpg",
+    imageSrc: "/img/skills/react.jpg",
     hoverHeight: "80%",
   },
   {
     title: "JavaScript",
-    imageSrc: "src/assets/img/skills/js.jpg",
+    imageSrc: "/img/skills/js.jpg",
     hoverHeight: "80%",
   },
 
   {
     title: "TailwindCSS",
-    imageSrc: "src/assets/img/skills/tailwind.jpg",
+    imageSrc: "/img/skills/tailwind.jpg",
     hoverHeight: "80%",
   },
 ];
@@ -43,25 +43,25 @@ export const Skills_Frontend_Config = [
 export const Skills_Backend_Config = [
   {
     title: "Node.js",
-    imageSrc: "src/assets/img/skills/nodejs.jpg",
+    imageSrc: "/img/skills/nodejs.jpg",
     hoverHeight: "60%",
   },
 
   {
     title: "Express",
-    imageSrc: "src/assets/img/skills/express.jpg",
+    imageSrc: "/img/skills/express.jpg",
     hoverHeight: "60%",
   },
 
   {
     title: "MongoDB",
-    imageSrc: "src/assets/img/skills/mongodb.jpg",
+    imageSrc: "/img/skills/mongodb.jpg",
     hoverHeight: "80%",
   },
 
   {
     title: "MySQL",
-    imageSrc: "src/assets/img/skills/sql.jpg",
+    imageSrc: "/img/skills/sql.jpg",
     hoverHeight: "30%",
   },
 ];
@@ -70,42 +70,42 @@ export const Skills_Backend_Config = [
 export const Tools_Config = [
   {
     title: "Git",
-    imageSrc: "src/assets/img/skills/git.jpg",
+    imageSrc: "/img/skills/git.jpg",
     hoverHeight: "75%",
   },
   {
     title: "GitHub",
-    imageSrc: "src/assets/img/skills/github.jpg",
+    imageSrc: "/img/skills/github.jpg",
     hoverHeight: "80%",
   },
   {
     title: "Notion",
-    imageSrc: "src/assets/img/skills/Notion.jpg",
+    imageSrc: "/img/skills/Notion.jpg",
     hoverHeight: "80%",
   },
   {
     title: "Postman",
-    imageSrc: "src/assets/img/skills/postman.jpg",
+    imageSrc: "/img/skills/postman.jpg",
     hoverHeight: "60%",
   },
   {
     title: "VSCode",
-    imageSrc: "src/assets/img/skills/vscode.jpg",
+    imageSrc: "/img/skills/vscode.jpg",
     hoverHeight: "90%",
   },
   {
     title: "Figma",
-    imageSrc: "src/assets/img/skills/figma.jpg",
+    imageSrc: "/img/skills/figma.jpg",
     hoverHeight: "80%",
   },
   {
     title: "Canva",
-    imageSrc: "src/assets/img/skills/canva.jpg",
+    imageSrc: "/img/skills/canva.jpg",
     hoverHeight: "80%",
   },
   {
     title: "Cursor",
-    imageSrc: "src/assets/img/skills/cursor.jpg",
+    imageSrc: "/img/skills/cursor.jpg",
     hoverHeight: "90%",
   },
 ];
@@ -114,27 +114,27 @@ export const Tools_Config = [
 export const SoftSkills_Config = [
   {
     title: "Teamwork",
-    imageSrc: "src/assets/img/skills/teamarbeit.jpg",
+    imageSrc: "/img/skills/teamarbeit.jpg",
     hoverHeight: "95%",
   },
   {
     title: "Kommunikation",
-    imageSrc: "src/assets/img/skills/kommunikation.jpg",
+    imageSrc: "/img/skills/kommunikation.jpg",
     hoverHeight: "80%",
   },
   {
     title: "Selbstständigkeit",
-    imageSrc: "src/assets/img/skills/selbst.jpg",
+    imageSrc: "/img/skills/selbst.jpg",
     hoverHeight: "95%",
   },
   {
     title: "Problemlösung",
-    imageSrc: "src/assets/img/skills/Problemlösung.jpg",
+    imageSrc: "/img/skills/Problemlösung.jpg",
     hoverHeight: "95%",
   },
   {
     title: "Lernbereitschaft",
-    imageSrc: "src/assets/img/skills/Lernbereitschaft.jpg",
+    imageSrc: "/img/skills/Lernbereitschaft.jpg",
     hoverHeight: "95%",
   },
 ];
@@ -143,23 +143,23 @@ export const SoftSkills_Config = [
 export const Deployment_Tools_Config = [
   {
     title: "Vercel",
-    imageSrc: "src/assets/img/skills/vercel.jpg",
+    imageSrc: "/img/skills/vercel.jpg",
     hoverHeight: "30%",
   },
 
   {
     title: "Render",
-    imageSrc: "src/assets/img/skills/render.jpg",
+    imageSrc: "/img/skills/render.jpg",
     hoverHeight: "50%",
   },
   {
     title: "Netlify",
-    imageSrc: "src/assets/img/skills/netlify.jpg",
+    imageSrc: "/img/skills/netlify.jpg",
     hoverHeight: "40%",
   },
   {
     title: "Github Pages",
-    imageSrc: "src/assets/img/skills/githupages.jpg",
+    imageSrc: "/img/skills/githupages.jpg",
     hoverHeight: "75%",
   },
 ];
