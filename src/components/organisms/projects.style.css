@@ -6,12 +6,12 @@
 /* Swiper Navigation Buttons - Custom Styling */
 .projects-swiper .swiper-button-next,
 .projects-swiper .swiper-button-prev {
-  color: #06b6d4; /* cyan-500 */
-  background: rgba(31, 41, 55, 0.8); /* gray-800 with opacity */
+  color: #0891b2; /* cyan-500 */
+  background: #01061a; /* gray-800 with opacity */
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  margin-top: -25px;
+  width: 40px;
+  height: 40px;
+  margin-top: -45px;
   backdrop-filter: blur(10px);
   border: 2px solid rgba(6, 182, 212, 0.3);
   transition: all 0.3s ease;
@@ -20,7 +20,7 @@
 .projects-swiper .swiper-button-next:hover,
 .projects-swiper .swiper-button-prev:hover {
   background: rgba(6, 182, 212, 0.1);
-  border-color: #06b6d4;
+  border-color: #0891b2;
   transform: scale(1.1);
 }
 
@@ -45,7 +45,7 @@
 }
 
 .projects-swiper .swiper-pagination-bullet-active {
-  background: #06b6d4; /* cyan-500 */
+  background: #0891b2; /* cyan-500 */
   opacity: 1;
   transform: scale(1.2);
 }
@@ -58,9 +58,9 @@
 
   .projects-swiper .swiper-button-next,
   .projects-swiper .swiper-button-prev {
-    width: 40px;
-    height: 40px;
-    margin-top: -20px;
+    width: 30px;
+    height: 30px;
+    margin-top: -45px;
   }
 
   .projects-swiper .swiper-button-next:after,
@@ -73,9 +73,5 @@
 @media (hover: none) {
   .projects-swiper .swiper-slide {
     transition: transform 0.3s ease;
-  }
-
-  .projects-swiper .swiper-slide:active {
-    transform: scale(0.98);
   }
 }

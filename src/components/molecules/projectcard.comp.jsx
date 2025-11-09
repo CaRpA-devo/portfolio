@@ -10,7 +10,7 @@ export function ProjectCard({ project }) {
 
   return (
     <div
-      className="bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 active:scale-105"
+      className="bg-[#01061a] not-visited:rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform "
       style={{
         height: card.height,
         boxShadow: `0 4px 15px 2px ${
@@ -46,7 +46,7 @@ function ProjectImage({ project }) {
 
       {/* Featured Badge */}
       {project.featured && (
-        <div className="absolute top-4 right-4 bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+        <div className="absolute top-4 right-4 bg-primary text-lime-100 px-3 py-1 rounded-full text-sm font-semibold">
           Featured
         </div>
       )}
@@ -62,13 +62,13 @@ function ProjectImage({ project }) {
  */
 function ProjectOverlay({ project }) {
   return (
-    <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+    <div className="absolute inset-0 bg-[#01061a] bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
       {project.liveUrl && (
         <a
           href={project.liveUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-cyan-600 text-white px-4 py-2 rounded-lg hover:bg-cyan-700 transition-colors flex items-center gap-2"
+          className="bg-primary text-lime-100 px-4 py-2 rounded-lg hover:bg-cyan-800 transition-colors flex items-center gap-2"
         >
           <Icon icon="mdi:open-in-new" width="16" height="16" />
           Live Demo
@@ -79,7 +79,7 @@ function ProjectOverlay({ project }) {
           href={project.githubUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-gray-700 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition-colors flex items-center gap-2"
+          className="bg-primary text-lime-100 px-4 py-2 rounded-lg hover:bg-cyan-800 transition-colors flex items-center gap-2"
         >
           <Icon icon="mdi:github" width="16" height="16" />
           GitHub
@@ -95,8 +95,8 @@ function ProjectOverlay({ project }) {
 function ProjectInfo({ project }) {
   return (
     <div className="p-6 h-52 flex flex-col">
-      <h3 className="text-xl font-bold text-cyan-400 mb-2">{project.title}</h3>
-      <p className="text-gray-300 text-sm mb-4 flex-grow">
+      <h3 className="text-xl font-bold text-cyan-600 mb-2">{project.title}</h3>
+      <p className="text-lime-100 text-sm mb-4 flex-grow">
         {project.description}
       </p>
 
@@ -115,7 +115,7 @@ function ProjectTechnologies({ technologies }) {
       {technologies.map((tech, index) => (
         <span
           key={index}
-          className="bg-purple-600 text-white px-2 py-1 rounded text-xs font-medium"
+          className="bg-primary text-lime-100 px-2 py-1 rounded text-xs font-medium"
         >
           {tech}
         </span>

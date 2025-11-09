@@ -25,7 +25,7 @@ export default function Projects() {
         <ProjectsSwiper />
 
         {/* Optional: Statistiken */}
-        <div className="mt-8 text-center text-gray-400 text-sm">
+        <div className="mt-8 text-center text-lime-100 text-sm">
           {stats.total} Projekte • {stats.featured} Featured •{" "}
           {stats.technologies} Technologien
         </div>
