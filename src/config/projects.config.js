@@ -49,7 +49,7 @@ export const PROJECTS_DATA = [
       "JavaScript",
       "Formspree",
     ],
-    liveUrl: "https://carpa-portfolio.netlify.app",
+    liveUrl: "https://portfolio-wgz6.onrender.com",
     githubUrl: "https://github.com/CaRpA-devo/portfolio",
     featured: true,
   },
