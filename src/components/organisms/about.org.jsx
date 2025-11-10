@@ -35,11 +35,7 @@ export default function About() {
               <button
                 onClick={() => {
                   // Immer mit window.open öffnen für bessere Kompatibilität
-                  window.open(
-                    "/public/cv.pdf",
-                    "_blank",
-                    "noopener,noreferrer"
-                  );
+                  window.open("/cv.pdf", "_blank", "noopener,noreferrer");
                 }}
                 className="bg-primary text-lime-100 rounded-2xl md:text-3xl text-xl font-semibold md:px-8 px-6 py-2 cursor-pointer z-10 transition-all transform hover:scale-105 hover:shadow-xl hover:bg-cyan-800"
               >
