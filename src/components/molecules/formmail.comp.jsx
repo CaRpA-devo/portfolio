@@ -49,11 +49,6 @@ export function FormMail() {
         className="flex flex-col items-center justify-center max-w-md mx-auto gap-4 w-full  "
         aria-live="polite"
       >
-        <input
-          type="hidden"
-          name="_autoresponse"
-          value="Vielen Dank für deine Nachricht! Ich melde mich in Kürze bei dir."
-        />
         {/* 📧 E-Mail */}
         <FormInput
           type="email"
