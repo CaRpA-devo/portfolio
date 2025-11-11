@@ -26,7 +26,11 @@ export function FormMail() {
   if (state.succeeded) {
     return (
       <div className="flex items-center  justify-center">
-        <p className="text-center flex gap-2 text-lime-100 mt-6 font-semibold">
+        <p
+          className="text-center flex gap-2 text-lime-100 mt-6 font-semibold"
+          role="status"
+          aria-live="polite"
+        >
           <Icon
             icon="material-symbols:check-box-outline"
             width="24"
@@ -43,13 +47,22 @@ export function FormMail() {
       <form
         onSubmit={handleFormSubmit}
         className="flex flex-col items-center justify-center max-w-md mx-auto gap-4 w-full  "
+        aria-live="polite"
       >
+        <input
+          type="hidden"
+          name="_autoresponse"
+          value="Vielen Dank für deine Nachricht! Ich melde mich in Kürze bei dir."
+        />
         {/* 📧 E-Mail */}
         <FormInput
           type="email"
           placeholder="Deine E-Mail"
-          name="replyTo"
           title="Bitte gib eine gültige E-Mail ein"
+          name="email"
+          id="contact-email"
+          ariaLabel="E-Mail Adresse"
+          autoComplete="email"
           icon={
             <Icon
               icon="material-symbols-light:mark-email-read-outline-rounded"
@@ -66,6 +79,10 @@ export function FormMail() {
           placeholder="Betreff"
           title="Betreff deiner Nachricht"
           className="text-lg"
+          name="subject"
+          id="contact-subject"
+          ariaLabel="Betreff deiner Nachricht"
+          autoComplete="off"
           icon={
             <Icon
               icon="material-symbols-light:subject"
@@ -77,12 +94,15 @@ export function FormMail() {
         />
         <ValidationError
           prefix="Betreff"
-          field="Betreff"
+          field="subject"
           errors={state.errors}
         />
 
         {/* 💬 Nachricht */}
-        <label className="input validator input-primary h-32 flex flex-col relative">
+        <label
+          className="input validator input-primary h-32 flex flex-col relative"
+          htmlFor="contact-message"
+        >
           {/* Icon über oder neben der Textarea */}
           <Icon
             icon="material-symbols-light:text-ad-outline-sharp"
@@ -95,7 +115,9 @@ export function FormMail() {
             placeholder="Deine Nachricht ..."
             rows="20"
             required
+            id="contact-message"
             className=" text-lime-100 p-1 pl-6 w-full border-none outline-none rounded text-lg "
+            aria-label="Nachrichtentext"
           ></textarea>
         </label>
         <ValidationError
@@ -119,10 +141,13 @@ export function FormMail() {
             }}
             required
             className="mt-1 w-5 h-5 text-cyan-700 bg-gray-800 border-gray-600 rounded"
+            aria-describedby="privacy-hint"
+            aria-invalid={showPrivacyError}
           />
           <label
             htmlFor="privacy"
             className="text-sm text-lime-100 leading-relaxed w-2xs"
+            id="privacy-hint"
           >
             Ich stimme zu, dass meine Daten vertraulich behandelt werden und nur
             zur Beantwortung meiner Anfrage verwendet werden.
@@ -132,7 +157,10 @@ export function FormMail() {
 
         {/* Fehlermeldung für Datenschutz-Checkbox */}
         {showPrivacyError && (
-          <div className="flex items-center gap-2 text-red-400 text-sm">
+          <div
+            className="flex items-center gap-2 text-red-400 text-sm"
+            role="alert"
+          >
             <Icon
               icon="material-symbols:error-outline"
               width="16"
