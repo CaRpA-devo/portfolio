@@ -48,6 +48,7 @@ export function FormMail() {
         <FormInput
           type="email"
           placeholder="Deine E-Mail"
+          name="replyTo"
           title="Bitte gib eine gültige E-Mail ein"
           icon={
             <Icon
